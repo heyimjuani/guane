@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167257848-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-167257848-1');
+  </script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WB2TJGL');</script>
+<!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Un manija musical más">
+
+  <meta property="og:title" content="Guane">
+  <meta property="og:description" content="Un manija musical más">
+  <meta property="og:image" content="http://guane.co/meta-social.jpg">
+  <meta property="og:url" content="http://guane.co">
+  <!--meta name="twitter:card" content="summary_large_image"-->
+
+  <meta property="og:site_name" content="Guane">
+  <meta name="twitter:image:alt" content="Un manija musical más">
+  <title>Guane - un manija musical más</title>
+
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB2TJGL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrap">
+  <div class="container">
+    <h1 id="page-title"><span>holis,</span> ser de la curiosidad</h1>
+    <p>habrás llegado acá buscando musiquita fresca y nutritiva. <br>esto es lo que tengo por ahora.</p>
+  </div>
+
+  <div class="card">
+    <h3>rapidito</h3>
+    <p>mi primer tema, electronicoso y precoz. ahre.</p>
+    <a href="https://open.spotify.com/track/4NC6cqK8tsrpnDs7BSmnF3?si=YZcLljuPQOaiS0xmqyYxNg" target="_blank" class="outbound btn-primary" id="Rapidito_spotify">Escuchalo en Spotify</a>
+    <a class="small" onclick="togglePanel()">¿no tenés Spotify? acá alternativas</a>
+  </div>
+  
+  <div class="container">
+    <p>es mi intención compartir más data pronto. si te interesa enterarte, recomiendo que me sigas en <a href="http://instagram.com/daleguane" class="outbound" id="Social_IG" target="_blank">Instagram</a> y/o en <a href="https://open.spotify.com/artist/0jzcoarkQGWsQADOAXR2iR?si=GnlIrMtJQ4uZxvZliAdVQA" class="outbound" id="Social_SP" target="_blank">Spotify</a>.</p>
+
+    <p>gracias por pasarte. que estés bien. <br> <strong>guane</strong></p>
+  </div>
+
+</div>
+
+<div id="panel">
+  <div class="bg" onclick="togglePanel()" id="close-panel"></div>
+  <div class="container">
+    <h2>a ver si alguna de estas te copa:</h2>
+    <ul>
+      <li><a href="http://instagram.com/daleguane" class="outbound" id="Rapidito_IG" target="_blank">Instagram</a></li>
+      <li><a href="https://music.apple.com/us/album/rapidito-single/1513836901?uo=4&app=apple+music" class="outbound" id="Rapidito_AP" target="_blank">Apple music</a></li>
+      <li><a href="https://www.deezer.com/album/148999192" class="outbound" id="Rapidito_DE" target="_blank">Deezer</a></li>
+      <li><a href="https://www.youtube.com/watch?v=BeaPKZF7RSI" class="outbound" id="Rapidito_YT" target="_blank">Youtube</a></li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+function togglePanel() {
+  var element = document.getElementById("panel");
+  element.classList.toggle("visible");
+}
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        document.getElementById("panel").classList.remove("visible");
+    }
+};
+</script>
+
+</body>
+</html>
