@@ -29,8 +29,14 @@ html, body {
 .card {
   border-radius: 10px;
   border: 1px solid #fff;
-  padding: 16px 20px;
   margin: 2em 0;
+}
+.card .block {
+  padding: 16px 20px;
+  position: relative;
+}
+.card .block:not(:first-child) {
+  border-top: 1px solid #fff;
 }
 
 .card h3 {
@@ -39,6 +45,21 @@ html, body {
   font-weight: 600;
   letter-spacing: 1px;
   padding: 0;
+}
+.card h4 {
+  margin: 0;
+  font-weight: 600;
+}
+span.hidden {
+  display: none;
+}
+.logo-cc0 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.logo-cc0 img {
+  width: 64px;
 }
 .card p {
   padding-top: 0;
@@ -77,6 +98,11 @@ a:hover {
   font-size: .9em;
   letter-spacing: 1px;
   margin-bottom: .5em;
+}
+
+.btn-spotify {
+  background: #1db954;
+  color: #fff;
 }
 
 #panel {
