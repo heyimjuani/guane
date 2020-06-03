@@ -31,6 +31,11 @@ html, body {
   border: 1px solid #fff;
   margin: 2em 0;
 }
+.card.white {
+  border: none;
+  background: #fff;
+  color: #000;
+}
 .card .block {
   padding: 16px 20px;
   position: relative;
@@ -45,6 +50,19 @@ html, body {
   font-weight: 600;
   letter-spacing: 1px;
   padding: 0;
+}
+.card.new h3:after {
+  content: "nuevo";
+  background: #ff0000;
+  font-size: .5em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  position: relative;
+  top: -3px;
+  margin-left: 10px;
+}
+.card.white.new h3:after {
+  color: #fff;
 }
 .card h4 {
   margin: 0;
@@ -84,6 +102,9 @@ a.small {
 a:hover {
   text-decoration: underline;
 }
+.white a.small {
+  color: #000;
+}
 
 .btn-primary {
   background: #fff;
@@ -99,10 +120,41 @@ a:hover {
   letter-spacing: 1px;
   margin-bottom: .5em;
 }
-
-.btn-spotify {
+.btn-primary.btn-spotify {
   background: #1db954;
   color: #fff;
+}
+
+.btn-primary.btn-youtube {
+  background: #ff0000;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .9em;
+  letter-spacing: 1px;
+  margin-bottom: .5em;
+}
+.btn-secondary.btn-spotify {
+  background: #000;
+  color: #fff;
+  border-color: #1db954;
+}
+.card.white .btn-secondary {
+  border-color: #000;
+  background: #fff;
+  color: #000;
 }
 
 #panel {
@@ -140,6 +192,11 @@ a:hover {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 0px 0px 10px #000;
+  display: none;
+}
+#panel.visible.track-01 .container.track-01,
+#panel.visible.track-02 .container.track-02 {
+  display: block;
 }
 #panel h2 {
   font-weight: 400;

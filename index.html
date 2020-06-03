@@ -43,21 +43,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="wrap">
   <div class="container">
-    <h1 id="page-title"><span>holis,</span> ser de la curiosidad</h1>
-    <p>habrás llegado acá buscando musiquita fresca y nutritiva. <br>esto es lo que tengo por ahora.</p>
+    <h1 id="page-title"><span>holis,</span> tomá datita musical</h1>
+    <!--p>habrás llegado acá buscando musiquita fresca y nutritiva. <br>esto es lo que tengo por ahora.</p-->
+  </div>
+
+  <div class="card new white">
+    <div class="block">
+      <h3>piloto automático</h3>
+      <p>mi primera canción con letra y todo lo que todes queremos en un tema. incluye super producción audiovisual. <br>hágale pues.</p>
+      <a href="https://www.youtube.com/watch?v=2fX2SrMbOEM" target="_blank" class="outbound btn-primary btn-youtube" id="Piloto_youtube">Mirá el video en Youtube</a>
+      <a href="https://open.spotify.com/track/08IT9ZYKsHliQFiBAHR78b?si=rj-piH4sTCSaxBZZa6_m_A" target="_blank" class="outbound btn-secondary" id="Piloto_spotify">Escuchalo en Spotify</a>
+      <a class="small" onclick="togglePanel(this)" data-track="track-02">¿no tenés Spotify? acá alternativas</a>
+    </div>
   </div>
 
   <div class="card">
     <div class="block">
       <h3>rapidito</h3>
-      <p>mi primer tema, electronicoso y precoz. ahre. ojalá te guste.</p>
-      <a href="https://open.spotify.com/track/4NC6cqK8tsrpnDs7BSmnF3?si=YZcLljuPQOaiS0xmqyYxNg" target="_blank" class="outbound btn-primary btn-spotify" id="Rapidito_spotify">Escuchalo en Spotify</a>
-      <a class="small" onclick="togglePanel()">¿no tenés Spotify? acá alternativas</a>
+      <p>mi primera publicación. track instrumental, electronicoso y precoz. ahre. ojalá te guste.</p>
+      <a href="https://open.spotify.com/track/4NC6cqK8tsrpnDs7BSmnF3?si=YZcLljuPQOaiS0xmqyYxNg" target="_blank" class="outbound btn-secondary btn-spotify" id="Rapidito_spotify">Escuchalo en Spotify</a>
+      <a class="small" onclick="togglePanel(this)" data-track="track-01">¿no tenés Spotify? acá alternativas</a>
     </div>
     <div class="block">
       <h4>rapidito es de todes</h4>
       <p>jugá con él. remixalo. samplealo. hacé lo que quieras, pero divertite y compartilo. </p>
-      <a href="https://www.dropbox.com/sh/ac6xtububckaxv0/AADK2FzumkCQj5qVPClcbhxGa?dl=0" target="_blank" class="outbound btn-primary" id="Rapidito_stems">descargar stems</a>
+      <a href="https://www.dropbox.com/sh/ac6xtububckaxv0/AADK2FzumkCQj5qVPClcbhxGa?dl=0" target="_blank" class="outbound btn-secondary" id="Rapidito_stems">descargar stems</a>
       <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
       <a rel="license" class="logo-cc0"
          href="http://creativecommons.org/publicdomain/zero/1.0/">
@@ -89,27 +99,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <div id="panel">
-  <div class="bg" onclick="togglePanel()" id="close-panel"></div>
-  <div class="container">
-    <h2>a ver si alguna de estas te copa:</h2>
+  <div class="bg" onclick="closePanel()" id="close-panel"></div>
+  <div class="container track-01">
+    <h2>a ver si alguna de estas te sirve:</h2>
     <ul>
       <li><a href="https://www.instagram.com/p/CAbT5fRA3Bx/" class="outbound" id="Rapidito_IG" target="_blank">Instagram</a></li>
       <li><a href="https://music.apple.com/us/album/rapidito-single/1513836901?uo=4&app=apple+music" class="outbound" id="Rapidito_AP" target="_blank">Apple music</a></li>
+      <li><a href="https://tidal.com/browse/track/141943991" class="outbound" id="Rapidito_TI" target="_blank">Tidal</a></li>
       <li><a href="https://www.deezer.com/album/148999192" class="outbound" id="Rapidito_DE" target="_blank">Deezer</a></li>
       <li><a href="https://www.youtube.com/watch?v=BeaPKZF7RSI" class="outbound" id="Rapidito_YT" target="_blank">Youtube</a></li>
+    </ul>
+  </div>
+  <div class="container track-02">
+    <h2>a ver si alguna de estas te sirve:</h2>
+    <ul>
+      <li><a href="https://music.apple.com/us/album/rapidito-single/1513836901?uo=4&app=apple+music" class="outbound" id="Piloto_AP" target="_blank">Apple music</a></li>
+      <li><a href="https://tidal.com/browse/track/143422918" class="outbound" id="Piloto_TI" target="_blank">Tidal</a></li>
+      <li><a href="https://www.deezer.com/en/track/977802572" class="outbound" id="Piloto_DE" target="_blank">Deezer</a></li>
     </ul>
   </div>
 </div>
 
 <script type="text/javascript">
-function togglePanel() {
+function togglePanel(e) {
   var element = document.getElementById("panel");
+  var song = e.getAttribute("data-track");
+  // alert(song);
   element.classList.toggle("visible");
+  element.classList.toggle(song);
+}
+function closePanel() {
+  document.getElementById("panel").removeAttribute('class');
 }
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     if (evt.keyCode == 27) {
-        document.getElementById("panel").classList.remove("visible");
+        document.getElementById("panel").removeAttribute('class');
     }
 };
 </script>
