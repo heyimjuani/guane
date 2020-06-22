@@ -51,15 +51,21 @@ html, body {
   letter-spacing: 1px;
   padding: 0;
 }
+.card h3 span {
+  font-size: .75em;
+  position: relative;
+  top: -5px;
+}
 .card.new h3:after {
   content: "nuevo";
+  display: inline;
   background: #ff0000;
   font-size: .5em;
   padding: 1px 5px;
   border-radius: 3px;
   position: relative;
-  top: -3px;
-  margin-left: 10px;
+  top: -7px;
+  margin-left: 5px;
 }
 .card.white.new h3:after {
   color: #fff;
