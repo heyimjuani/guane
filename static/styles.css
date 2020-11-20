@@ -157,6 +157,11 @@ a:hover {
   color: #fff;
   border-color: #1db954;
 }
+.btn-secondary.btn-youtube {
+  background: #000;
+  color: #fff;
+  border-color: #ff0000;
+}
 .card.white .btn-secondary {
   border-color: #000;
   background: #fff;
@@ -201,7 +206,8 @@ a:hover {
   display: none;
 }
 #panel.visible.track-01 .container.track-01,
-#panel.visible.track-02 .container.track-02 {
+#panel.visible.track-02 .container.track-02,
+#panel.visible.track-03 .container.track-03 {
   display: block;
 }
 #panel h2 {
